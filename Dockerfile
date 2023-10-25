@@ -14,6 +14,7 @@ RUN groupadd -g ${GROUP_ID} ${USER_NAME} && \
 # System dependencies
 ARG arch=amd64
 RUN apt update -y && apt upgrade -y && DEBIAN_FRONTEND=noninteractive apt install -y --no-install-recommends \
+        openssh-client \
         wget \
         unzip \
         libc6-i386 \
